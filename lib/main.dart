@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple
-      ),
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
       home: const RootPage(),
     );
   }
@@ -32,6 +30,12 @@ class _RootPageState extends State<RootPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          debugPrint('Teste');
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
