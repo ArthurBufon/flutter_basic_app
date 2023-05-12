@@ -25,6 +25,7 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
+  int currentPage = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +37,15 @@ class _RootPageState extends State<RootPage> {
           debugPrint('Teste');
         },
         child: const Icon(Icons.add),
+      ),
+      bottomNavigationBar: NavigationBar(
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.person), label: 'Profile')
+        ],
+        onDestinationSelected: (int index){
+          currentPage = index;
+        },
       ),
     );
   }
