@@ -50,17 +50,21 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             },
             child: const Text('Elevated Button'),
           ),
-          OutlinedButton(
-            onPressed: () {
-              debugPrint('Outlined Button');
-            },
-            child: const Text('Outlined Button'),
-          ),
-          TextButton(
-            onPressed: () {
-              debugPrint('Text Button');
-            },
-            child: const Text('Text Button'),
+          widget(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                Icon(
+                  Icons.local_fire_department,
+                  color: Colors.purple,
+                ),
+                Text('Row Widget'),
+                Icon(
+                  Icons.local_fire_department,
+                  color: Colors.purple,
+                ),
+              ],
+            ),
           )
         ],
       ),
