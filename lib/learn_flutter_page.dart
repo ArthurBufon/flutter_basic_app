@@ -22,6 +22,16 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           },
           icon: const Icon(Icons.arrow_back_ios),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              debugPrint('Actions');
+            },
+            icon: const Icon(
+              Icons.info_outline,
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -90,7 +100,8 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
                     isCheckBox = newBool;
                   });
                 }),
-                Image.network('https://img.freepik.com/fotos-premium/paisagem-japonesa-da-cidade-da-noite-da-fantasia-luz-de-neon-edificios-residenciais-grande-arvore-de-sakura_742252-3397.jpg?w=2000')
+            Image.network(
+                'https://img.freepik.com/fotos-premium/paisagem-japonesa-da-cidade-da-noite-da-fantasia-luz-de-neon-edificios-residenciais-grande-arvore-de-sakura_742252-3397.jpg?w=2000')
           ],
         ),
       ),
