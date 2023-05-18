@@ -50,7 +50,11 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             },
             child: const Text('Elevated Button'),
           ),
-          widget(
+          GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: () {
+              debugPrint('This is the row');
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
